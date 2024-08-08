@@ -1,0 +1,14 @@
+options {
+	directory "/var/cache/bind";
+
+        recursion yes;
+	allow-query { any; };
+        dnssec-validation no;
+        dump-file "/var/cache/bind/dump.db";
+        forwarders {
+                8.8.8.8;
+        };
+        forward only;
+
+};
+
